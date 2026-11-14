@@ -59,7 +59,7 @@ export default function Login() {
           <p className="mt-2 text-sm leading-relaxed text-muted">
             We sent a confirmation link to <span className="font-medium text-fg">{confirmEmail}</span>. Open it, then come back and log in.
           </p>
-          <button type="button" onClick={() => switchMode('login')} className="mt-4 min-h-12 w-full rounded-xl bg-accent font-semibold text-accent-ink">
+          <button type="button" onClick={() => switchMode('login')} className="mt-4 min-h-12 w-full rounded-full bg-accent font-semibold text-accent-ink">
             Go to log in
           </button>
         </div>
@@ -155,7 +155,7 @@ export default function Login() {
               </p>
             )}
 
-            <button type="submit" disabled={busy} className="min-h-12 rounded-xl bg-accent font-semibold text-accent-ink disabled:opacity-60">
+            <button type="submit" disabled={busy} className="min-h-12 rounded-full bg-accent font-semibold text-accent-ink disabled:opacity-60">
               {busy ? 'Please wait…' : mode === 'login' ? 'Log in' : 'Create account'}
             </button>
           </form>

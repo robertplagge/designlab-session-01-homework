@@ -92,8 +92,8 @@ function ActionBar({ children }: { children: React.ReactNode }) {
   )
 }
 
-const primary = 'flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl bg-accent px-4 font-semibold text-accent-ink active:scale-[0.98]'
-const secondary = 'flex min-h-12 items-center justify-center gap-2 rounded-xl border border-line px-4 font-semibold hover:bg-surface-2'
+const primary = 'flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-accent px-4 font-semibold text-accent-ink active:scale-[0.98]'
+const secondary = 'flex min-h-12 items-center justify-center gap-2 rounded-full border border-line px-4 font-semibold hover:bg-surface-2'
 
 /* ------------------------------ Series ------------------------------ */
 
@@ -188,7 +188,7 @@ function SeriesView({ detail }: { detail: TitleDetail }) {
           )}
           {next && (
             <button type="button" className={primary} onClick={() => logOne(next)}>
-              <Check size={20} strokeWidth={3} aria-hidden /> Watched S{next.season} E{next.episode}
+              <Check size={20} strokeWidth={2.5} aria-hidden /> Watched S{next.season} E{next.episode}
             </button>
           )}
           {!next && title?.status === 'watchlist' && (
@@ -222,11 +222,11 @@ function Manage({ dropped, onDrop, onResume, onRemove }: { dropped: boolean; onD
   return (
     <section aria-label="Manage" className="flex flex-wrap items-center gap-2 border-t border-line pt-5">
       {dropped ? (
-        <button type="button" onClick={onResume} className="min-h-11 rounded-xl border border-line px-4 text-sm font-medium hover:bg-surface-2">
+        <button type="button" onClick={onResume} className="min-h-11 rounded-full border border-line px-4 text-sm font-medium hover:bg-surface-2">
           Resume watching
         </button>
       ) : (
-        <button type="button" onClick={onDrop} className="min-h-11 rounded-xl border border-line px-4 text-sm font-medium hover:bg-surface-2">
+        <button type="button" onClick={onDrop} className="min-h-11 rounded-full border border-line px-4 text-sm font-medium hover:bg-surface-2">
           Mark as dropped
         </button>
       )}
@@ -288,7 +288,7 @@ function MovieView({ detail }: { detail: TitleDetail }) {
               <input id="date" type="date" value={date} max={toDateInput(new Date().toISOString())} onChange={(e) => setDate(e.target.value || date)} className="min-h-11 rounded-xl border border-line bg-bg px-3 text-base" />
             </div>
             <TimeInput value={time} onChange={setTime} invalid={timeError} />
-            <button type="button" onClick={saveProgress} className="min-h-11 rounded-xl border border-line px-4 text-sm font-semibold hover:bg-surface-2">
+            <button type="button" onClick={saveProgress} className="min-h-11 rounded-full border border-line px-4 text-sm font-semibold hover:bg-surface-2">
               Save progress
             </button>
           </div>
@@ -343,7 +343,7 @@ function MovieView({ detail }: { detail: TitleDetail }) {
           </button>
         )}
         <button type="button" className={primary} onClick={markWatched}>
-          <Check size={20} strokeWidth={3} aria-hidden /> {history.some((w) => w.completed) ? 'Log rewatch' : 'Mark watched'}
+          <Check size={20} strokeWidth={2.5} aria-hidden /> {history.some((w) => w.completed) ? 'Log rewatch' : 'Mark watched'}
         </button>
       </ActionBar>
     </>

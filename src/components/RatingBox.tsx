@@ -25,10 +25,10 @@ export function RatingPrompt({ title }: { title: Title }) {
         className="mt-2 min-h-11 w-full rounded-xl border border-line bg-surface px-3 text-base placeholder:text-muted"
       />
       <div className="mt-3 flex gap-2">
-        <button type="button" disabled={rating === undefined && !note.trim()} onClick={() => setRating(title.id, rating, note)} className="min-h-11 rounded-xl bg-accent px-5 font-semibold text-accent-ink disabled:opacity-40">
+        <button type="button" disabled={rating === undefined && !note.trim()} onClick={() => setRating(title.id, rating, note)} className="min-h-11 rounded-full bg-accent px-5 font-semibold text-accent-ink disabled:opacity-40">
           Save
         </button>
-        <button type="button" onClick={() => dismissRatingPrompt(title.id)} className="min-h-11 rounded-xl px-5 font-medium text-muted hover:bg-surface-2 hover:text-fg">
+        <button type="button" onClick={() => dismissRatingPrompt(title.id)} className="min-h-11 rounded-full px-5 font-medium text-muted hover:bg-surface-2 hover:text-fg">
           Skip
         </button>
       </div>

@@ -63,7 +63,7 @@ export default function UpNext() {
           icon={<Clapperboard size={40} aria-hidden />}
           title="Nothing in progress yet"
           action={
-            <button type="button" onClick={() => navigate('/search')} className="min-h-12 rounded-xl bg-accent px-5 font-semibold text-accent-ink">
+            <button type="button" onClick={() => navigate('/search')} className="min-h-12 rounded-full bg-accent px-5 font-semibold text-accent-ink">
               Search a title
             </button>
           }
@@ -98,14 +98,14 @@ export default function UpNext() {
                     <button
                       type="button"
                       onClick={() => markWatched(t)}
-                      className={`mt-auto flex min-h-12 items-center justify-center gap-2 rounded-xl bg-accent px-4 font-semibold text-accent-ink active:scale-[0.98] ${logged === t.id ? 'anim-pop' : ''}`}
+                      className={`mt-auto flex min-h-12 items-center justify-center gap-2 rounded-full bg-accent px-4 font-semibold text-accent-ink active:scale-[0.98] ${logged === t.id ? 'anim-pop' : ''}`}
                     >
-                      <Check size={20} strokeWidth={3} aria-hidden />
+                      <Check size={20} strokeWidth={2.5} aria-hidden />
                       <span>Watched</span>
                       <span className="sr-only">{t.type === 'tv' && t.nextEpisode ? `S${t.nextEpisode.season} E${t.nextEpisode.episode} of ${t.name}` : t.name}</span>
                     </button>
                   ) : (
-                    <Link to={href(t)} className="mt-auto flex min-h-12 items-center justify-center rounded-xl border border-line font-semibold hover:bg-surface-2">
+                    <Link to={href(t)} className="mt-auto flex min-h-12 items-center justify-center rounded-full border border-line font-semibold hover:bg-surface-2">
                       Choose episode
                     </Link>
                   )}

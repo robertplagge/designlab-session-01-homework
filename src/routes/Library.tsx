@@ -93,7 +93,7 @@ export default function Library() {
               icon={<LibraryIcon size={40} aria-hidden />}
               title={`Nothing in ${TABS.find((t) => t.id === tab)!.label} yet`}
               action={
-                <button type="button" onClick={() => navigate('/search')} className="min-h-12 rounded-xl bg-accent px-5 font-semibold text-accent-ink">
+                <button type="button" onClick={() => navigate('/search')} className="min-h-12 rounded-full bg-accent px-5 font-semibold text-accent-ink">
                   Search a title
                 </button>
               }

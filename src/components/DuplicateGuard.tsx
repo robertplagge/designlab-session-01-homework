@@ -33,10 +33,10 @@ export function DuplicateGuard({ label, watchedOn, onRewatch, onRemove, onCancel
         </h2>
         <p className="mt-1 text-sm text-muted">{label}</p>
         <div className="mt-5 flex flex-col gap-2">
-          <button ref={first} type="button" onClick={onRewatch} className="min-h-12 rounded-xl bg-accent font-semibold text-accent-ink">
+          <button ref={first} type="button" onClick={onRewatch} className="min-h-12 rounded-full bg-accent font-semibold text-accent-ink">
             Log rewatch
           </button>
-          <button type="button" onClick={onCancel} className="min-h-12 rounded-xl border border-line font-semibold hover:bg-surface-2">
+          <button type="button" onClick={onCancel} className="min-h-12 rounded-full border border-line font-semibold hover:bg-surface-2">
             Cancel
           </button>
           <button type="button" onClick={onRemove} className="min-h-11 rounded-xl text-sm text-muted hover:text-danger">

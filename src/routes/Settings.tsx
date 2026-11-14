@@ -16,7 +16,7 @@ const REGIONS: [string, string][] = [
   ['CA', 'Canada'], ['FR', 'France'], ['ES', 'Spain'], ['IT', 'Italy'], ['NL', 'Netherlands'], ['AU', 'Australia'],
 ]
 
-const btn = 'flex min-h-12 items-center justify-center gap-2 rounded-xl border border-line px-4 font-medium hover:bg-surface-2'
+const btn = 'flex min-h-12 items-center justify-center gap-2 rounded-full border border-line px-4 font-medium hover:bg-surface-2'
 
 function Section({ title, children }: { title: string; children: ReactNode }) {
   return (

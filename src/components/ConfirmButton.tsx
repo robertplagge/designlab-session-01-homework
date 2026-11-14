@@ -10,15 +10,15 @@ export function ConfirmButton({ children, confirmLabel, onConfirm, className = '
   }, [armed])
   return armed ? (
     <span className="flex gap-2">
-      <button type="button" onClick={() => { setArmed(false); onConfirm() }} className={`min-h-11 rounded-xl bg-danger px-4 text-sm font-semibold text-bg ${className}`}>
+      <button type="button" onClick={() => { setArmed(false); onConfirm() }} className={`min-h-11 rounded-full bg-danger px-4 text-sm font-semibold text-bg ${className}`}>
         {confirmLabel}
       </button>
-      <button type="button" onClick={() => setArmed(false)} className="min-h-11 rounded-xl px-4 text-sm text-muted hover:bg-surface-2">
+      <button type="button" onClick={() => setArmed(false)} className="min-h-11 rounded-full px-4 text-sm text-muted hover:bg-surface-2">
         Cancel
       </button>
     </span>
   ) : (
-    <button type="button" onClick={() => setArmed(true)} className={`min-h-11 rounded-xl border border-line px-4 text-sm font-medium text-danger hover:bg-surface-2 ${className}`}>
+    <button type="button" onClick={() => setArmed(true)} className={`min-h-11 rounded-full border border-line px-4 text-sm font-medium text-danger hover:bg-surface-2 ${className}`}>
       {children}
     </button>
   )
