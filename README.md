@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/og-image.png" alt="Seen: a private tracker for movies and series, with a green check mark logo" width="100%">
+</p>
+
 # Seen
 
 A private, local-first tracker for movies and series, across every streaming service.
@@ -8,6 +12,18 @@ Mobile-first React app, installable as a PWA. Built as a design-school project (
 **Status:** frontend MVP. Watch data lives in your browser (IndexedDB), title metadata comes from a
 bundled demo catalogue, and optional email + password accounts run on Supabase Auth. Cloud sync and
 live TMDB data are the next steps.
+
+## Screenshots
+
+<p align="center">
+  <img src="docs/screenshots/up-next.png" alt="Up next: in-progress series and a paused movie, each with a one-tap Watched button" width="19%">
+  <img src="docs/screenshots/search.png" alt="Search: results with status badges such as Watched with a rating, On watchlist, Paused at 0:48 and S3 E7 next" width="19%">
+  <img src="docs/screenshots/series-detail.png" alt="Series detail: Severance with season progress and a floating Watched S2 E3 button" width="19%">
+  <img src="docs/screenshots/library.png" alt="Library: Watching tab as a poster grid with filters and sorting" width="19%">
+  <img src="docs/screenshots/login.png" alt="Log in and Create account screen" width="19%">
+</p>
+
+<p align="center"><sub>Up next · Search · Series detail · Library · Log in (demo data)</sub></p>
 
 ## Features
 
